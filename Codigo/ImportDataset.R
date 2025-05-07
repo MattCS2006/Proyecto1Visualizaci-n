@@ -2,16 +2,21 @@
 library(readr)
 library(dplyr)
 library(tidyr)
-library(plotly)
+library(stringr)  # <- Necesaria para str_extract
 
-# Leer correctamente el archivo descargado desde WDI
-# IMPORTANTE:NO haberlo editado en Excel
-WB_WDI <- read_csv("C:/Users/Usuario I 2025/Downloads/WB_WDI.csv", skip = 4)#AQUÍ YO LO HICE MANUALMENTE
-#DELE IMPORT DATASET, Y EN SKIP 4
+# Cargar el archivo
+data <- read_csv("Data/Data.csv", na = c("..", "", "NA"))
 
-# Verificar las primeras filas
-print(head(WB_WDI, 3))  # Solo imprime las 3 primeras filas
+# Vista rápida del dataset, esto es temporal 
+glimpse(data)
 
-# Verificar nombres de columnas
-print(colnames(WB_WDI))
-#EL PROBLEMA ESQ NO LO ESTA LEYENDO BIEN
+# Transformar a formato largo
+data_long <- data %>%
+  pivot_longer(
+    cols = matches("^\\d{4}"),  # columnas con nombres de años (2000, 2001, ...)
+    names_to = "Año",
+    values_to = "Valor"
+  ) %>%
+  mutate(
+    Año = as.integer(str_extract(Año, "^\\d{4}"))  # extraer y convertir a entero directamente
+  )

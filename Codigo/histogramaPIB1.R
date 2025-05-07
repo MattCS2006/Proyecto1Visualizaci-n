@@ -1,13 +1,24 @@
-library(tidyverse)
+# Asegurarse de tener plotly instalado
+# install.packages("plotly")
+
+library(dplyr)
 library(plotly)
 
-#'PIB_per_capita' y 'Country'
-# Filtrado del año 2022
-data_2022 <- WB_WDI %>% filter(Year == 2022)
+# Filtrar el indicador de PIB per cápita para 2022
+gdp_2022 <- data_long %>%
+  filter(`Series Name` == "GDP per capita (current US$)",
+         Año == 2022,
+         !is.na(Valor))
 
-p <- ggplot(data_2022, aes(x = PIB_per_capita)) +
-  geom_histogram(bins = 30, fill = 'skyblue', color = 'white') +
-  labs(title = "Distribución del PIB per cápita (2022)",
-       x = "PIB per cápita (USD)", y = "Frecuencia")
-
-ggplotly(p)
+# Crear histograma interactivo
+plot_ly(gdp_2022,
+        x = ~Valor,
+        type = "histogram",
+        nbinsx = 30,
+        marker = list(color = "steelblue")) %>%
+  layout(
+    title = "Distribución del PIB per cápita (2022)",
+    xaxis = list(title = "PIB per cápita (USD)"),
+    yaxis = list(title = "Cantidad de países"),
+    bargap = 0.05
+  )
