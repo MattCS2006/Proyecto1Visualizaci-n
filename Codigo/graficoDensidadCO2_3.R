@@ -1,9 +1,26 @@
-library(tidyverse)
+# Cargar librerías necesarias
+library(dplyr)
+library(plotly)
 
-#columnas: 'CO2_per_capita' y 'Year'
-data_co2 <- WB_WDI %>% filter(Year == 2022)
+# Filtrar el dataset para emisiones de CO2 per cápita en 2022
+co2_2022 <- data_long %>%
+  filter(`Series Name` == "Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)",
+         Año == 2022,
+         !is.na(Valor))
 
-ggplot(data_co2, aes(x = CO2_per_capita)) +
-  geom_density(fill = 'salmon', alpha = 0.6) +
-  labs(title = "Densidad de emisiones de CO2 per cápita (2022)",
-       x = "CO2 per cápita (toneladas)", y = "Densidad")
+# Crear gráfico de densidad interactivo
+plot_ly(type = "scatter", mode = "lines") %>%
+  add_trace(
+    x = density(co2_2022$Valor)$x,
+    y = density(co2_2022$Valor)$y,
+    fill = "tozeroy",
+    fillcolor = "rgba(255, 127, 14, 0.5)",
+    line = list(color = "orange"),
+    name = "Densidad"
+  ) %>%
+  layout(
+    title = "Distribución de emisiones de CO₂ per cápita (2022)",
+    xaxis = list(title = "Emisiones per cápita (toneladas)"),
+    yaxis = list(title = "Densidad estimada"),
+    showlegend = FALSE
+  )
