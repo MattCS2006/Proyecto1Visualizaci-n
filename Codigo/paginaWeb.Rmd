@@ -27,10 +27,7 @@ library(stringr)
 library(plotly)
 ```
 
-
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*. ##Introducción Introducción \# Introducción En este análisis se presenta la historia de los datos sobre ..., se cargan las bases de datos, se limpian y se generan visualizaciones clave.
-
-
 
 ```{r}
 source("ImportDataset.R", local = knitr::knit_global())
@@ -45,51 +42,38 @@ When you save the notebook, an HTML file containing the code and output will be 
 The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
 
 # 1) Introducción
- En un mundo cada vez más globalizado, comprender las diferencias y similitudes entre países en términos de desarrollo económico, social y ambiental es fundamental para la toma de decisiones y formulación de políticas públicas. Este proyecto realiza un análisis exploratorio de datos (EDA) sobre el conjunto de datos World Development Indicators (WDI) del Banco Mundial, con el objetivo de descubrir patrones, relaciones y tendencias clave entre distintas variables de desarrollo.
- 
-# 2) Descripción del Problema:
-La gran cantidad de indicadores disponibles en los datos del Banco Mundial permite explorar preguntas como:
-¿Cómo ha evolucionado el acceso a la educación y la salud en distintas regiones?
-¿Existe una relación entre el PIB per cápita y la esperanza de vida?
-¿Qué países muestran anomalías en sus indicadores ambientales?
-¿Cómo se relacionan las múltiples dimensiones del desarrollo en el tiempo?
-¿Se relaciona el nivel de alfabetización con la esperanza de vida de la persona?
 
+En un mundo cada vez más globalizado, comprender las diferencias y similitudes entre países en términos de desarrollo económico, social y ambiental es fundamental para la toma de decisiones y formulación de políticas públicas. Este proyecto realiza un análisis exploratorio de datos (EDA) sobre el conjunto de datos World Development Indicators (WDI) del Banco Mundial, con el objetivo de descubrir patrones, relaciones y tendencias clave entre distintas variables de desarrollo.
+
+# 2) Descripción del Problema:
+
+La gran cantidad de indicadores disponibles en los datos del Banco Mundial permite explorar preguntas como: ¿Cómo ha evolucionado el acceso a la educación y la salud en distintas regiones? ¿Existe una relación entre el PIB per cápita y la esperanza de vida? ¿Qué países muestran anomalías en sus indicadores ambientales? ¿Cómo se relacionan las múltiples dimensiones del desarrollo en el tiempo? ¿Se relaciona el nivel de alfabetización con la esperanza de vida de la persona?
 
 Este proyecto se propone utilizar técnicas de visualización y análisis exploratorio para generar insights significativos que nos ayuden a responder algunas de estas preguntas y a su mismo tiempo que el mismo espectador de estas pueda generar conclusiones por el mismo.
 
 # 3) Fuentes:
-Este proyecto de análisis se basa mayormente en el dataset de World Development Indicators (WDI), disponible públicamente en World Bank Data360. Este conjunto contiene más de mil indicadores para más de 200 países desde 1960 hasta la actualidad. Para esta investigación, se seleccionaron los siguientes indicadores clave:
-PIB per cápita (USD actuales) – NY.GDP.PCAP.CD
-Esperanza de vida al nacer (años) – SP.DYN.LE00.IN
-Tasa de alfabetización (% de adultos) – SE.ADT.LITR.ZS
-Emisiones de CO₂ (toneladas per cápita) – EN.ATM.CO2E.PC
-Población total – SP.POP.TOTL
-Porcentaje de acceso a servicios básicos – SH.H2O.BASW.ZS
+
+Este proyecto de análisis se basa mayormente en el dataset de World Development Indicators (WDI), disponible públicamente en World Bank Data360. Este conjunto contiene más de mil indicadores para más de 200 países desde 1960 hasta la actualidad. Para esta investigación, se seleccionaron los siguientes indicadores clave: PIB per cápita (USD actuales) – NY.GDP.PCAP.CD Esperanza de vida al nacer (años) – SP.DYN.LE00.IN Tasa de alfabetización (% de adultos) – SE.ADT.LITR.ZS Emisiones de CO₂ (toneladas per cápita) – EN.ATM.CO2E.PC Población total – SP.POP.TOTL Porcentaje de acceso a servicios básicos – SH.H2O.BASW.ZS
 
 # 4) Gráficas:
 
 # Análisis unidimensional
 
 # 1. Distribución del PIB per cápita (2022)
+
 Distribución: Se observa una distribución asimétrica hacia la derecha.
 
+Tendencia general: La mayoría de los países tienen un PIB per cápita inferior a los \$10,000 USD.
 
-Tendencia general:
-La mayoría de los países tienen un PIB per cápita inferior a los $10,000 USD.
-
-Un número reducido de países como Suiza, Noruega, Catar y Estados Unidos muestran niveles extremadamente altos (>60,000 USD).
+Un número reducido de países como Suiza, Noruega, Catar y Estados Unidos muestran niveles extremadamente altos (\>60,000 USD).
 
 Esto refleja la desigualdad económica global, donde muchos países siguen en desarrollo mientras que una minoría posee economías altamente desarrolladas.
-
 
 # 2.Esperanza de Vida por Region (2022)
 
 Distribución general: La gráfica muestra las diferencias en la esperanza de vida al nacer entre regiones.
 
-
 Se observa que las regiones de Europa y América del Norte tienen un rango de esperanza de vida bastante alto y estrecho, mientras que África Subsahariana muestra una mayor dispersión y valores más bajos.
-
 
 Algunas regiones, como Asia Oriental, tienen una alta esperanza de vida, pero con variabilidad dependiendo de los países dentro de la región.
 
@@ -101,21 +85,17 @@ Tendencia general: Regiones como África Subsahariana y Asia Meridional tienen u
 
 Distribución: Altamente asimétrica con una larga cola derecha.
 
-
 Tendencia general:
 
 La mayoría de países emiten menos de 5 toneladas de CO₂ per cápita.
 
 Casos extremos como Catar y Emiratos Árabes Unidos superan las 25 toneladas, destacando como outliers.
 
-
 Esto refleja una enorme desigualdad en términos de responsabilidad ambiental y desarrollo económico.
-
 
 # 4. ScatterPlot del PIB vs la Esperzanza de Vida
 
 Se observa una correlación positiva: los países con mayor PIB per cápita tienden a tener una mayor esperanza de vida.
-
 
 Existen excepciones notables, como Estados Unidos, que tiene un PIB alto pero una esperanza de vida más baja en comparación con otros países de ingreso similar.
 
@@ -125,11 +105,8 @@ La escala logarítmica permite observar con mayor claridad los países de bajos 
 
 Es probable que los países con una mayor tasa de alfabetización también presenten un mayor porcentaje de acceso a agua básica.
 
-
 Se pueden observar excepciones en países con diferentes niveles de población, donde la falta de alfabetización o de acceso a agua básica puede ser más pronunciada.
 
-
 # Todavía me falta pero la estructura que ya está las secciones de .r, es dandole al c+ de arriba, opción .r, y de ahí se pone el codigo de importación en el medio de estás secciones de texto
-
 
 # Nota: Si no logramos, lit solo copiamos el codigo.
