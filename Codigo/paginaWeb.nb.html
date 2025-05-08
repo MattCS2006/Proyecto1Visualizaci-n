@@ -1755,13 +1755,32 @@ Mundial</h1>
 
 <div id="TOC">
 <ul>
-<li><a href="#grafico-1" id="toc-grafico-1">1) Grafico 1</a></li>
+<li><a href="#introducción" id="toc-introducción">1)
+Introducción</a></li>
+<li><a href="#descripción-del-problema" id="toc-descripción-del-problema">2) Descripción del Problema:</a></li>
+<li><a href="#fuentes" id="toc-fuentes">3) Fuentes:</a></li>
+<li><a href="#gráficas" id="toc-gráficas">4) Gráficas:</a></li>
+<li><a href="#análisis-unidimensional" id="toc-análisis-unidimensional">Análisis unidimensional</a></li>
+<li><a href="#distribución-del-pib-per-cápita-2022" id="toc-distribución-del-pib-per-cápita-2022">1. Distribución del PIB
+per cápita (2022)</a></li>
+<li><a href="#esperanza-de-vida-por-region-2022" id="toc-esperanza-de-vida-por-region-2022">2.Esperanza de Vida por
+Region (2022)</a></li>
+<li><a href="#grafico-de-densidad-del-co2" id="toc-grafico-de-densidad-del-co2">3. Grafico de densidad del
+CO2</a></li>
+<li><a href="#scatterplot-del-pib-vs-la-esperzanza-de-vida" id="toc-scatterplot-del-pib-vs-la-esperzanza-de-vida">4. ScatterPlot del
+PIB vs la Esperzanza de Vida</a></li>
+<li><a href="#bubbleplot-alfabetizacion-agua-poblacion-2022" id="toc-bubbleplot-alfabetizacion-agua-poblacion-2022">5. BubblePlot
+Alfabetizacion Agua Poblacion (2022)</a></li>
+<li><a href="#todavía-me-falta-pero-la-estructura-que-ya-está-las-secciones-de-.r-es-dandole-al-c-de-arriba-opción-.r-y-de-ahí-se-pone-el-codigo-de-importación-en-el-medio-de-estás-secciones-de-texto" id="toc-todavía-me-falta-pero-la-estructura-que-ya-está-las-secciones-de-.r-es-dandole-al-c-de-arriba-opción-.r-y-de-ahí-se-pone-el-codigo-de-importación-en-el-medio-de-estás-secciones-de-texto">Todavía
+me falta pero la estructura que ya está las secciones de .r, es dandole
+al c+ de arriba, opción .r, y de ahí se pone el codigo de importación en
+el medio de estás secciones de texto</a></li>
+<li><a href="#nota-si-no-logramos-lit-solo-copiamos-el-codigo." id="toc-nota-si-no-logramos-lit-solo-copiamos-el-codigo.">Nota: Si no
+logramos, lit solo copiamos el codigo.</a></li>
 </ul>
 </div>
 
 <!-- rnb-text-begin -->
-<div id="grafico-1" class="section level1">
-<h1>1) Grafico 1</h1>
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
@@ -1771,6 +1790,11 @@ sobre …, se cargan las bases de datos, se limpian y se generan
 visualizaciones clave.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVjMjkxY21ObEtGd2lRMjlrYVdkdkwwbHRjRzl5ZEVSaGRHRnpaWFF1VWx3aUxDQnNiMk5oYkNBOUlHdHVhWFJ5T2pwcmJtbDBYMmRzYjJKaGJDZ3BLVnh1WUdCZ0luMD0gLS0+XG5cbmBgYHJcbnNvdXJjZShcIkNvZGlnby9JbXBvcnREYXRhc2V0LlJcIiwgbG9jYWwgPSBrbml0cjo6a25pdF9nbG9iYWwoKSlcbmBgYFxuXG48IS0tIHJuYi1zb3VyY2UtZW5kIC0tPlxuIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc291cmNlKFwiQ29kaWdvL0ltcG9ydERhdGFzZXQuUlwiLCBsb2NhbCA9IGtuaXRyOjprbml0X2dsb2JhbCgpKVxuYGBgIn0= -->
+<pre class="r"><code>source(&quot;Codigo/ImportDataset.R&quot;, local = knitr::knit_global())</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgZW4gZmlsZShmaWxlbmFtZSwgXCJyXCIsIGVuY29kaW5nID0gZW5jb2RpbmcpOiBcbiAgbm8gc2UgcHVlZGUgYWJyaXIgbGEgY29uZXhpw7NuXG4ifQ== -->
 <pre><code>Error en file(filename, &quot;r&quot;, encoding = encoding): 
   no se puede abrir la conexión</code></pre>
@@ -1779,6 +1803,11 @@ visualizaciones clave.</p>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVjMjkxY21ObEtGd2lRMjlrYVdkdkwxTmpZWFIwWlhKUWJHOTBVRWxDZG5ORmMzQmxjbUZ1ZW1GV2FXUmhOQzVTWENJc0lHeHZZMkZzSUQwZ2EyNXBkSEk2T210dWFYUmZaMnh2WW1Gc0tDa3BYRzVnWUdBaWZRPT0gLS0+XG5cbmBgYHJcbnNvdXJjZShcIkNvZGlnby9TY2F0dGVyUGxvdFBJQnZzRXNwZXJhbnphVmlkYTQuUlwiLCBsb2NhbCA9IGtuaXRyOjprbml0X2dsb2JhbCgpKVxuYGBgXG5cbjwhLS0gcm5iLXNvdXJjZS1lbmQgLS0+XG4ifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc291cmNlKFwiQ29kaWdvL1NjYXR0ZXJQbG90UElCdnNFc3BlcmFuemFWaWRhNC5SXCIsIGxvY2FsID0ga25pdHI6OmtuaXRfZ2xvYmFsKCkpXG5gYGAifQ== -->
+<pre class="r"><code>source(&quot;Codigo/ScatterPlotPIBvsEsperanzaVida4.R&quot;, local = knitr::knit_global())</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>When you save the notebook, an HTML file containing the code and
@@ -1788,10 +1817,120 @@ press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
 editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
 run any R code chunks. Instead, the output of the chunk when it was last
 run in the editor is displayed.</p>
+<div id="introducción" class="section level1">
+<h1>1) Introducción</h1>
+<p>En un mundo cada vez más globalizado, comprender las diferencias y
+similitudes entre países en términos de desarrollo económico, social y
+ambiental es fundamental para la toma de decisiones y formulación de
+políticas públicas. Este proyecto realiza un análisis exploratorio de
+datos (EDA) sobre el conjunto de datos World Development Indicators
+(WDI) del Banco Mundial, con el objetivo de descubrir patrones,
+relaciones y tendencias clave entre distintas variables de
+desarrollo.</p>
+</div>
+<div id="descripción-del-problema" class="section level1">
+<h1>2) Descripción del Problema:</h1>
+<p>La gran cantidad de indicadores disponibles en los datos del Banco
+Mundial permite explorar preguntas como: ¿Cómo ha evolucionado el acceso
+a la educación y la salud en distintas regiones? ¿Existe una relación
+entre el PIB per cápita y la esperanza de vida? ¿Qué países muestran
+anomalías en sus indicadores ambientales? ¿Cómo se relacionan las
+múltiples dimensiones del desarrollo en el tiempo? ¿Se relaciona el
+nivel de alfabetización con la esperanza de vida de la persona?</p>
+<p>Este proyecto se propone utilizar técnicas de visualización y
+análisis exploratorio para generar insights significativos que nos
+ayuden a responder algunas de estas preguntas y a su mismo tiempo que el
+mismo espectador de estas pueda generar conclusiones por el mismo.</p>
+</div>
+<div id="fuentes" class="section level1">
+<h1>3) Fuentes:</h1>
+<p>Este proyecto de análisis se basa mayormente en el dataset de World
+Development Indicators (WDI), disponible públicamente en World Bank
+Data360. Este conjunto contiene más de mil indicadores para más de 200
+países desde 1960 hasta la actualidad. Para esta investigación, se
+seleccionaron los siguientes indicadores clave: PIB per cápita (USD
+actuales) – NY.GDP.PCAP.CD Esperanza de vida al nacer (años) –
+SP.DYN.LE00.IN Tasa de alfabetización (% de adultos) – SE.ADT.LITR.ZS
+Emisiones de CO₂ (toneladas per cápita) – EN.ATM.CO2E.PC Población total
+– SP.POP.TOTL Porcentaje de acceso a servicios básicos –
+SH.H2O.BASW.ZS</p>
+</div>
+<div id="gráficas" class="section level1">
+<h1>4) Gráficas:</h1>
+</div>
+<div id="análisis-unidimensional" class="section level1">
+<h1>Análisis unidimensional</h1>
+</div>
+<div id="distribución-del-pib-per-cápita-2022" class="section level1">
+<h1>1. Distribución del PIB per cápita (2022)</h1>
+<p>Distribución: Se observa una distribución asimétrica hacia la
+derecha.</p>
+<p>Tendencia general: La mayoría de los países tienen un PIB per cápita
+inferior a los $10,000 USD.</p>
+<p>Un número reducido de países como Suiza, Noruega, Catar y Estados
+Unidos muestran niveles extremadamente altos (&gt;60,000 USD).</p>
+<p>Esto refleja la desigualdad económica global, donde muchos países
+siguen en desarrollo mientras que una minoría posee economías altamente
+desarrolladas.</p>
+</div>
+<div id="esperanza-de-vida-por-region-2022" class="section level1">
+<h1>2.Esperanza de Vida por Region (2022)</h1>
+<p>Distribución general: La gráfica muestra las diferencias en la
+esperanza de vida al nacer entre regiones.</p>
+<p>Se observa que las regiones de Europa y América del Norte tienen un
+rango de esperanza de vida bastante alto y estrecho, mientras que África
+Subsahariana muestra una mayor dispersión y valores más bajos.</p>
+<p>Algunas regiones, como Asia Oriental, tienen una alta esperanza de
+vida, pero con variabilidad dependiendo de los países dentro de la
+región.</p>
+<p>Valores extremos (outliers): Se pueden identificar algunas regiones
+con valores atípicos, como países con niveles extremadamente altos de
+esperanza de vida (por ejemplo, en Europa o América del Norte).</p>
+<p>Tendencia general: Regiones como África Subsahariana y Asia
+Meridional tienen una media de esperanza de vida más baja y una gran
+dispersión, lo que indica disparidades significativas entre los países
+dentro de estas regiones.</p>
+</div>
+<div id="grafico-de-densidad-del-co2" class="section level1">
+<h1>3. Grafico de densidad del CO2</h1>
+<p>Distribución: Altamente asimétrica con una larga cola derecha.</p>
+<p>Tendencia general:</p>
+<p>La mayoría de países emiten menos de 5 toneladas de CO₂ per
+cápita.</p>
+<p>Casos extremos como Catar y Emiratos Árabes Unidos superan las 25
+toneladas, destacando como outliers.</p>
+<p>Esto refleja una enorme desigualdad en términos de responsabilidad
+ambiental y desarrollo económico.</p>
+</div>
+<div id="scatterplot-del-pib-vs-la-esperzanza-de-vida" class="section level1">
+<h1>4. ScatterPlot del PIB vs la Esperzanza de Vida</h1>
+<p>Se observa una correlación positiva: los países con mayor PIB per
+cápita tienden a tener una mayor esperanza de vida.</p>
+<p>Existen excepciones notables, como Estados Unidos, que tiene un PIB
+alto pero una esperanza de vida más baja en comparación con otros países
+de ingreso similar.</p>
+<p>La escala logarítmica permite observar con mayor claridad los países
+de bajos y medianos ingresos, que de otro modo quedarían agrupados.</p>
+</div>
+<div id="bubbleplot-alfabetizacion-agua-poblacion-2022" class="section level1">
+<h1>5. BubblePlot Alfabetizacion Agua Poblacion (2022)</h1>
+<p>Es probable que los países con una mayor tasa de alfabetización
+también presenten un mayor porcentaje de acceso a agua básica.</p>
+<p>Se pueden observar excepciones en países con diferentes niveles de
+población, donde la falta de alfabetización o de acceso a agua básica
+puede ser más pronunciada.</p>
+</div>
+<div id="todavía-me-falta-pero-la-estructura-que-ya-está-las-secciones-de-.r-es-dandole-al-c-de-arriba-opción-.r-y-de-ahí-se-pone-el-codigo-de-importación-en-el-medio-de-estás-secciones-de-texto" class="section level1">
+<h1>Todavía me falta pero la estructura que ya está las secciones de .r,
+es dandole al c+ de arriba, opción .r, y de ahí se pone el codigo de
+importación en el medio de estás secciones de texto</h1>
+</div>
+<div id="nota-si-no-logramos-lit-solo-copiamos-el-codigo." class="section level1">
+<h1>Nota: Si no logramos, lit solo copiamos el codigo.</h1>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFuw6FsaXNpcyBkZWwgRGF0YXNldCBNdW5kaWFsIFdESSBkZWwgQmFuY28gTXVuZGlhbCINCmF1dGhvcjogIk1hdGhldyBDb3JkZXJvIGUgSWFuIFVnYWxkZSINCm91dHB1dDogDQogIGh0bWxfbm90ZWJvb2s6DQogICAgdG9jOiB0cnVlDQogICAgdG9jX2RlcHRoOiAyDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQotLS0NCiMgMSkgR3JhZmljbyAxDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPSBGQUxTRX0NCiMgRmlqYXIgZWwgd29ya2luZyBkaXJlY3RvcnkgYWwgZGVsIC5SbWQNCmlmIChpbnRlcmFjdGl2ZSgpICYmIHJlcXVpcmVOYW1lc3BhY2UoInJzdHVkaW9hcGkiLCBxdWlldGx5ID0gVFJVRSkpIHsNCiAgc2V0d2QoZGlybmFtZShyc3R1ZGlvYXBpOjpnZXRBY3RpdmVEb2N1bWVudENvbnRleHQoKSRwYXRoKSkNCn0NCg0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KA0KICBlY2hvICAgID0gRkFMU0UsDQogIG1lc3NhZ2UgPSBGQUxTRSwNCiAgd2FybmluZyA9IEZBTFNFDQopDQoNCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeSh0aWR5cikNCmxpYnJhcnkoc3RyaW5ncikNCmxpYnJhcnkocGxvdGx5KQ0KYGBgDQoNCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLiAjI0ludHJvZHVjY2nDs24gSW50cm9kdWNjacOzbiBcIyBJbnRyb2R1Y2Npw7NuIEVuIGVzdGUgYW7DoWxpc2lzIHNlIHByZXNlbnRhIGxhIGhpc3RvcmlhIGRlIGxvcyBkYXRvcyBzb2JyZSAuLi4sIHNlIGNhcmdhbiBsYXMgYmFzZXMgZGUgZGF0b3MsIHNlIGxpbXBpYW4geSBzZSBnZW5lcmFuIHZpc3VhbGl6YWNpb25lcyBjbGF2ZS4NCg0KDQoNCmBgYHtyfQ0Kc291cmNlKCJDb2RpZ28vSW1wb3J0RGF0YXNldC5SIiwgbG9jYWwgPSBrbml0cjo6a25pdF9nbG9iYWwoKSkNCmBgYA0KDQpgYGB7cn0NCnNvdXJjZSgiQ29kaWdvL1NjYXR0ZXJQbG90UElCdnNFc3BlcmFuemFWaWRhNC5SIiwgbG9jYWwgPSBrbml0cjo6a25pdF9nbG9iYWwoKSkNCmBgYA0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkFuw6FsaXNpcyBkZWwgRGF0YXNldCBNdW5kaWFsIFdESSBkZWwgQmFuY28gTXVuZGlhbCINCmF1dGhvcjogIk1hdGhldyBDb3JkZXJvIGUgSWFuIFVnYWxkZSINCm91dHB1dDogDQogIGh0bWxfbm90ZWJvb2s6DQogICAgdG9jOiB0cnVlDQogICAgdG9jX2RlcHRoOiAyDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQotLS0NCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9IEZBTFNFfQ0KIyBGaWphciBlbCB3b3JraW5nIGRpcmVjdG9yeSBhbCBkZWwgLlJtZA0KaWYgKGludGVyYWN0aXZlKCkgJiYgcmVxdWlyZU5hbWVzcGFjZSgicnN0dWRpb2FwaSIsIHF1aWV0bHkgPSBUUlVFKSkgew0KICBzZXR3ZChkaXJuYW1lKHJzdHVkaW9hcGk6OmdldEFjdGl2ZURvY3VtZW50Q29udGV4dCgpJHBhdGgpKQ0KfQ0KDQprbml0cjo6b3B0c19jaHVuayRzZXQoDQogIGVjaG8gICAgPSBGQUxTRSwNCiAgbWVzc2FnZSA9IEZBTFNFLA0KICB3YXJuaW5nID0gRkFMU0UNCikNCg0KbGlicmFyeShyZWFkcikNCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KHRpZHlyKQ0KbGlicmFyeShzdHJpbmdyKQ0KbGlicmFyeShwbG90bHkpDQpgYGANCg0KDQpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ3RybCtBbHQrSSouICMjSW50cm9kdWNjacOzbiBJbnRyb2R1Y2Npw7NuIFwjIEludHJvZHVjY2nDs24gRW4gZXN0ZSBhbsOhbGlzaXMgc2UgcHJlc2VudGEgbGEgaGlzdG9yaWEgZGUgbG9zIGRhdG9zIHNvYnJlIC4uLiwgc2UgY2FyZ2FuIGxhcyBiYXNlcyBkZSBkYXRvcywgc2UgbGltcGlhbiB5IHNlIGdlbmVyYW4gdmlzdWFsaXphY2lvbmVzIGNsYXZlLg0KDQoNCg0KYGBge3J9DQpzb3VyY2UoIkNvZGlnby9JbXBvcnREYXRhc2V0LlIiLCBsb2NhbCA9IGtuaXRyOjprbml0X2dsb2JhbCgpKQ0KYGBgDQoNCmBgYHtyfQ0Kc291cmNlKCJDb2RpZ28vU2NhdHRlclBsb3RQSUJ2c0VzcGVyYW56YVZpZGE0LlIiLCBsb2NhbCA9IGtuaXRyOjprbml0X2dsb2JhbCgpKQ0KYGBgDQoNCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ3RybCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLg0KDQpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuDQoNCiMgMSkgSW50cm9kdWNjacOzbg0KIEVuIHVuIG11bmRvIGNhZGEgdmV6IG3DoXMgZ2xvYmFsaXphZG8sIGNvbXByZW5kZXIgbGFzIGRpZmVyZW5jaWFzIHkgc2ltaWxpdHVkZXMgZW50cmUgcGHDrXNlcyBlbiB0w6lybWlub3MgZGUgZGVzYXJyb2xsbyBlY29uw7NtaWNvLCBzb2NpYWwgeSBhbWJpZW50YWwgZXMgZnVuZGFtZW50YWwgcGFyYSBsYSB0b21hIGRlIGRlY2lzaW9uZXMgeSBmb3JtdWxhY2nDs24gZGUgcG9sw610aWNhcyBww7pibGljYXMuIEVzdGUgcHJveWVjdG8gcmVhbGl6YSB1biBhbsOhbGlzaXMgZXhwbG9yYXRvcmlvIGRlIGRhdG9zIChFREEpIHNvYnJlIGVsIGNvbmp1bnRvIGRlIGRhdG9zIFdvcmxkIERldmVsb3BtZW50IEluZGljYXRvcnMgKFdESSkgZGVsIEJhbmNvIE11bmRpYWwsIGNvbiBlbCBvYmpldGl2byBkZSBkZXNjdWJyaXIgcGF0cm9uZXMsIHJlbGFjaW9uZXMgeSB0ZW5kZW5jaWFzIGNsYXZlIGVudHJlIGRpc3RpbnRhcyB2YXJpYWJsZXMgZGUgZGVzYXJyb2xsby4NCiANCiMgMikgRGVzY3JpcGNpw7NuIGRlbCBQcm9ibGVtYToNCkxhIGdyYW4gY2FudGlkYWQgZGUgaW5kaWNhZG9yZXMgZGlzcG9uaWJsZXMgZW4gbG9zIGRhdG9zIGRlbCBCYW5jbyBNdW5kaWFsIHBlcm1pdGUgZXhwbG9yYXIgcHJlZ3VudGFzIGNvbW86DQrCv0PDs21vIGhhIGV2b2x1Y2lvbmFkbyBlbCBhY2Nlc28gYSBsYSBlZHVjYWNpw7NuIHkgbGEgc2FsdWQgZW4gZGlzdGludGFzIHJlZ2lvbmVzPw0Kwr9FeGlzdGUgdW5hIHJlbGFjacOzbiBlbnRyZSBlbCBQSUIgcGVyIGPDoXBpdGEgeSBsYSBlc3BlcmFuemEgZGUgdmlkYT8NCsK/UXXDqSBwYcOtc2VzIG11ZXN0cmFuIGFub21hbMOtYXMgZW4gc3VzIGluZGljYWRvcmVzIGFtYmllbnRhbGVzPw0Kwr9Dw7NtbyBzZSByZWxhY2lvbmFuIGxhcyBtw7psdGlwbGVzIGRpbWVuc2lvbmVzIGRlbCBkZXNhcnJvbGxvIGVuIGVsIHRpZW1wbz8NCsK/U2UgcmVsYWNpb25hIGVsIG5pdmVsIGRlIGFsZmFiZXRpemFjacOzbiBjb24gbGEgZXNwZXJhbnphIGRlIHZpZGEgZGUgbGEgcGVyc29uYT8NCg0KDQpFc3RlIHByb3llY3RvIHNlIHByb3BvbmUgdXRpbGl6YXIgdMOpY25pY2FzIGRlIHZpc3VhbGl6YWNpw7NuIHkgYW7DoWxpc2lzIGV4cGxvcmF0b3JpbyBwYXJhIGdlbmVyYXIgaW5zaWdodHMgc2lnbmlmaWNhdGl2b3MgcXVlIG5vcyBheXVkZW4gYSByZXNwb25kZXIgYWxndW5hcyBkZSBlc3RhcyBwcmVndW50YXMgeSBhIHN1IG1pc21vIHRpZW1wbyBxdWUgZWwgbWlzbW8gZXNwZWN0YWRvciBkZSBlc3RhcyBwdWVkYSBnZW5lcmFyIGNvbmNsdXNpb25lcyBwb3IgZWwgbWlzbW8uDQoNCiMgMykgRnVlbnRlczoNCkVzdGUgcHJveWVjdG8gZGUgYW7DoWxpc2lzIHNlIGJhc2EgbWF5b3JtZW50ZSBlbiBlbCBkYXRhc2V0IGRlIFdvcmxkIERldmVsb3BtZW50IEluZGljYXRvcnMgKFdESSksIGRpc3BvbmlibGUgcMO6YmxpY2FtZW50ZSBlbiBXb3JsZCBCYW5rIERhdGEzNjAuIEVzdGUgY29uanVudG8gY29udGllbmUgbcOhcyBkZSBtaWwgaW5kaWNhZG9yZXMgcGFyYSBtw6FzIGRlIDIwMCBwYcOtc2VzIGRlc2RlIDE5NjAgaGFzdGEgbGEgYWN0dWFsaWRhZC4gUGFyYSBlc3RhIGludmVzdGlnYWNpw7NuLCBzZSBzZWxlY2Npb25hcm9uIGxvcyBzaWd1aWVudGVzIGluZGljYWRvcmVzIGNsYXZlOg0KUElCIHBlciBjw6FwaXRhIChVU0QgYWN0dWFsZXMpIOKAkyBOWS5HRFAuUENBUC5DRA0KRXNwZXJhbnphIGRlIHZpZGEgYWwgbmFjZXIgKGHDsW9zKSDigJMgU1AuRFlOLkxFMDAuSU4NClRhc2EgZGUgYWxmYWJldGl6YWNpw7NuICglIGRlIGFkdWx0b3MpIOKAkyBTRS5BRFQuTElUUi5aUw0KRW1pc2lvbmVzIGRlIENP4oKCICh0b25lbGFkYXMgcGVyIGPDoXBpdGEpIOKAkyBFTi5BVE0uQ08yRS5QQw0KUG9ibGFjacOzbiB0b3RhbCDigJMgU1AuUE9QLlRPVEwNClBvcmNlbnRhamUgZGUgYWNjZXNvIGEgc2VydmljaW9zIGLDoXNpY29zIOKAkyBTSC5IMk8uQkFTVy5aUw0KDQojIDQpIEdyw6FmaWNhczoNCg0KIyBBbsOhbGlzaXMgdW5pZGltZW5zaW9uYWwNCg0KIyAxLiBEaXN0cmlidWNpw7NuIGRlbCBQSUIgcGVyIGPDoXBpdGEgKDIwMjIpDQpEaXN0cmlidWNpw7NuOiBTZSBvYnNlcnZhIHVuYSBkaXN0cmlidWNpw7NuIGFzaW3DqXRyaWNhIGhhY2lhIGxhIGRlcmVjaGEuDQoNCg0KVGVuZGVuY2lhIGdlbmVyYWw6DQpMYSBtYXlvcsOtYSBkZSBsb3MgcGHDrXNlcyB0aWVuZW4gdW4gUElCIHBlciBjw6FwaXRhIGluZmVyaW9yIGEgbG9zICQxMCwwMDAgVVNELg0KDQpVbiBuw7ptZXJvIHJlZHVjaWRvIGRlIHBhw61zZXMgY29tbyBTdWl6YSwgTm9ydWVnYSwgQ2F0YXIgeSBFc3RhZG9zIFVuaWRvcyBtdWVzdHJhbiBuaXZlbGVzIGV4dHJlbWFkYW1lbnRlIGFsdG9zICg+NjAsMDAwIFVTRCkuDQoNCkVzdG8gcmVmbGVqYSBsYSBkZXNpZ3VhbGRhZCBlY29uw7NtaWNhIGdsb2JhbCwgZG9uZGUgbXVjaG9zIHBhw61zZXMgc2lndWVuIGVuIGRlc2Fycm9sbG8gbWllbnRyYXMgcXVlIHVuYSBtaW5vcsOtYSBwb3NlZSBlY29ub23DrWFzIGFsdGFtZW50ZSBkZXNhcnJvbGxhZGFzLg0KDQoNCiMgMi5Fc3BlcmFuemEgZGUgVmlkYSBwb3IgUmVnaW9uICgyMDIyKQ0KDQpEaXN0cmlidWNpw7NuIGdlbmVyYWw6IExhIGdyw6FmaWNhIG11ZXN0cmEgbGFzIGRpZmVyZW5jaWFzIGVuIGxhIGVzcGVyYW56YSBkZSB2aWRhIGFsIG5hY2VyIGVudHJlIHJlZ2lvbmVzLg0KDQoNClNlIG9ic2VydmEgcXVlIGxhcyByZWdpb25lcyBkZSBFdXJvcGEgeSBBbcOpcmljYSBkZWwgTm9ydGUgdGllbmVuIHVuIHJhbmdvIGRlIGVzcGVyYW56YSBkZSB2aWRhIGJhc3RhbnRlIGFsdG8geSBlc3RyZWNobywgbWllbnRyYXMgcXVlIMOBZnJpY2EgU3Vic2FoYXJpYW5hIG11ZXN0cmEgdW5hIG1heW9yIGRpc3BlcnNpw7NuIHkgdmFsb3JlcyBtw6FzIGJham9zLg0KDQoNCkFsZ3VuYXMgcmVnaW9uZXMsIGNvbW8gQXNpYSBPcmllbnRhbCwgdGllbmVuIHVuYSBhbHRhIGVzcGVyYW56YSBkZSB2aWRhLCBwZXJvIGNvbiB2YXJpYWJpbGlkYWQgZGVwZW5kaWVuZG8gZGUgbG9zIHBhw61zZXMgZGVudHJvIGRlIGxhIHJlZ2nDs24uDQoNClZhbG9yZXMgZXh0cmVtb3MgKG91dGxpZXJzKTogU2UgcHVlZGVuIGlkZW50aWZpY2FyIGFsZ3VuYXMgcmVnaW9uZXMgY29uIHZhbG9yZXMgYXTDrXBpY29zLCBjb21vIHBhw61zZXMgY29uIG5pdmVsZXMgZXh0cmVtYWRhbWVudGUgYWx0b3MgZGUgZXNwZXJhbnphIGRlIHZpZGEgKHBvciBlamVtcGxvLCBlbiBFdXJvcGEgbyBBbcOpcmljYSBkZWwgTm9ydGUpLg0KDQpUZW5kZW5jaWEgZ2VuZXJhbDogUmVnaW9uZXMgY29tbyDDgWZyaWNhIFN1YnNhaGFyaWFuYSB5IEFzaWEgTWVyaWRpb25hbCB0aWVuZW4gdW5hIG1lZGlhIGRlIGVzcGVyYW56YSBkZSB2aWRhIG3DoXMgYmFqYSB5IHVuYSBncmFuIGRpc3BlcnNpw7NuLCBsbyBxdWUgaW5kaWNhIGRpc3BhcmlkYWRlcyBzaWduaWZpY2F0aXZhcyBlbnRyZSBsb3MgcGHDrXNlcyBkZW50cm8gZGUgZXN0YXMgcmVnaW9uZXMuDQoNCiMgMy4gR3JhZmljbyBkZSBkZW5zaWRhZCBkZWwgQ08yDQoNCkRpc3RyaWJ1Y2nDs246IEFsdGFtZW50ZSBhc2ltw6l0cmljYSBjb24gdW5hIGxhcmdhIGNvbGEgZGVyZWNoYS4NCg0KDQpUZW5kZW5jaWEgZ2VuZXJhbDoNCg0KTGEgbWF5b3LDrWEgZGUgcGHDrXNlcyBlbWl0ZW4gbWVub3MgZGUgNSB0b25lbGFkYXMgZGUgQ0/igoIgcGVyIGPDoXBpdGEuDQoNCkNhc29zIGV4dHJlbW9zIGNvbW8gQ2F0YXIgeSBFbWlyYXRvcyDDgXJhYmVzIFVuaWRvcyBzdXBlcmFuIGxhcyAyNSB0b25lbGFkYXMsIGRlc3RhY2FuZG8gY29tbyBvdXRsaWVycy4NCg0KDQpFc3RvIHJlZmxlamEgdW5hIGVub3JtZSBkZXNpZ3VhbGRhZCBlbiB0w6lybWlub3MgZGUgcmVzcG9uc2FiaWxpZGFkIGFtYmllbnRhbCB5IGRlc2Fycm9sbG8gZWNvbsOzbWljby4NCg0KDQojIDQuIFNjYXR0ZXJQbG90IGRlbCBQSUIgdnMgbGEgRXNwZXJ6YW56YSBkZSBWaWRhDQoNClNlIG9ic2VydmEgdW5hIGNvcnJlbGFjacOzbiBwb3NpdGl2YTogbG9zIHBhw61zZXMgY29uIG1heW9yIFBJQiBwZXIgY8OhcGl0YSB0aWVuZGVuIGEgdGVuZXIgdW5hIG1heW9yIGVzcGVyYW56YSBkZSB2aWRhLg0KDQoNCkV4aXN0ZW4gZXhjZXBjaW9uZXMgbm90YWJsZXMsIGNvbW8gRXN0YWRvcyBVbmlkb3MsIHF1ZSB0aWVuZSB1biBQSUIgYWx0byBwZXJvIHVuYSBlc3BlcmFuemEgZGUgdmlkYSBtw6FzIGJhamEgZW4gY29tcGFyYWNpw7NuIGNvbiBvdHJvcyBwYcOtc2VzIGRlIGluZ3Jlc28gc2ltaWxhci4NCg0KTGEgZXNjYWxhIGxvZ2Fyw610bWljYSBwZXJtaXRlIG9ic2VydmFyIGNvbiBtYXlvciBjbGFyaWRhZCBsb3MgcGHDrXNlcyBkZSBiYWpvcyB5IG1lZGlhbm9zIGluZ3Jlc29zLCBxdWUgZGUgb3RybyBtb2RvIHF1ZWRhcsOtYW4gYWdydXBhZG9zLg0KDQojIDUuIEJ1YmJsZVBsb3QgQWxmYWJldGl6YWNpb24gQWd1YSBQb2JsYWNpb24gKDIwMjIpDQoNCkVzIHByb2JhYmxlIHF1ZSBsb3MgcGHDrXNlcyBjb24gdW5hIG1heW9yIHRhc2EgZGUgYWxmYWJldGl6YWNpw7NuIHRhbWJpw6luIHByZXNlbnRlbiB1biBtYXlvciBwb3JjZW50YWplIGRlIGFjY2VzbyBhIGFndWEgYsOhc2ljYS4NCg0KDQpTZSBwdWVkZW4gb2JzZXJ2YXIgZXhjZXBjaW9uZXMgZW4gcGHDrXNlcyBjb24gZGlmZXJlbnRlcyBuaXZlbGVzIGRlIHBvYmxhY2nDs24sIGRvbmRlIGxhIGZhbHRhIGRlIGFsZmFiZXRpemFjacOzbiBvIGRlIGFjY2VzbyBhIGFndWEgYsOhc2ljYSBwdWVkZSBzZXIgbcOhcyBwcm9udW5jaWFkYS4NCg0KDQojIFRvZGF2w61hIG1lIGZhbHRhIHBlcm8gbGEgZXN0cnVjdHVyYSBxdWUgeWEgZXN0w6EgbGFzIHNlY2Npb25lcyBkZSAuciwgZXMgZGFuZG9sZSBhbCBjKyBkZSBhcnJpYmEsIG9wY2nDs24gLnIsIHkgZGUgYWjDrSBzZSBwb25lIGVsIGNvZGlnbyBkZSBpbXBvcnRhY2nDs24gZW4gZWwgbWVkaW8gZGUgZXN0w6FzIHNlY2Npb25lcyBkZSB0ZXh0bw0KDQoNCiMgTm90YTogU2kgbm8gbG9ncmFtb3MsIGxpdCBzb2xvIGNvcGlhbW9zIGVsIGNvZGlnby4=</div>
 
 
 
