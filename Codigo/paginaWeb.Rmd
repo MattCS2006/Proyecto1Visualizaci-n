@@ -1,0 +1,46 @@
+---
+title: "Análisis del Dataset Mundial WDI del Banco Mundial"
+author: "Mathew Cordero e Ian Ugalde"
+output: 
+  html_notebook:
+    toc: true
+    toc_depth: 2
+    code_folding: hide
+---
+# 1) Grafico 1
+
+```{r setup, include= FALSE}
+# Fijar el working directory al del .Rmd
+if (interactive() && requireNamespace("rstudioapi", quietly = TRUE)) {
+  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+}
+
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(plotly)
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*. ##Introducción Introducción \# Introducción En este análisis se presenta la historia de los datos sobre ..., se cargan las bases de datos, se limpian y se generan visualizaciones clave.
+
+
+
+```{r}
+source("Codigo/ImportDataset.R", local = knitr::knit_global())
+```
+
+```{r}
+source("Codigo/ScatterPlotPIBvsEsperanzaVida4.R", local = knitr::knit_global())
+```
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

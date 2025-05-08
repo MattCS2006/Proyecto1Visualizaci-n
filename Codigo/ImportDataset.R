@@ -20,3 +20,4 @@ data_long <- data %>%
   mutate(
     Año = as.integer(str_extract(Año, "^\\d{4}"))  # extraer y convertir a entero directamente
   )
+

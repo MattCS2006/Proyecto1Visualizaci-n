@@ -35,3 +35,4 @@ plot_ly(
     xaxis = list(title = "PIB per cápita (US$)", type = "log"),
     yaxis = list(title = "Esperanza de vida (años)")
   )
+
