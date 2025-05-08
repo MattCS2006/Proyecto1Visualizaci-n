@@ -1,8 +1,78 @@
+# Cargar librerías necesarias
+library(dplyr)
 library(plotly)
+library(countrycode)
 
-# Columnas: PIB_per_capita, CO2_per_capita, Esperanza_vida, Region, Poblacion
-data_2022 <- WB_WDI %>% filter(Year == 2022)
+# Lista de agregados a excluir (regiones, bloques económicos, etc.)
+agregados <- c(
+  "Africa Eastern and Southern", "Africa Western and Central", "Arab World", "Caribbean small states",
+  "Central Europe and the Baltics", "East Asia & Pacific",
+  "East Asia & Pacific (excluding high income)", "East Asia & Pacific (IDA & IBRD countries)",
+  "Euro area", "Europe & Central Asia", "Europe & Central Asia (excluding high income)",
+  "Europe & Central Asia (IDA & IBRD countries)", "European Union", "Latin America & Caribbean", "Latin America & Caribbean (excluding high income)",
+  "Latin America & the Caribbean (IDA & IBRD countries)", "Middle East & North Africa",
+  "Middle East & North Africa (excluding high income)", "Middle East & North Africa (IDA & IBRD countries)",
+  "North America", "South Asia", "South Asia (IDA & IBRD)", "Sub-Saharan Africa", "Sub-Saharan Africa (excluding high income)",
+  "Sub-Saharan Africa (IDA & IBRD countries)", "Upper middle income", "World",
+  "Early-demographic dividend", "Fragile and conflict affected situations", "Heavily indebted poor countries (HIPC)",
+  "High income", "IBRD only", "IDA & IBRD total", "IDA blend", "IDA only", "IDA total",
+  "Late-demographic dividend", "Least developed countries: UN classification",
+  "Low & middle income", "Low income", "Lower middle income", "Middle income", "OECD members",
+  "Other small states", "Pacific island small states", "Post-demographic dividend", "Pre-demographic dividend",
+  "Small states"
+)
 
-plot_ly(data_2022, x = ~PIB_per_capita, y = ~CO2_per_capita, z = ~Esperanza_vida,
-        color = ~Region, size = ~Poblacion, text = ~Country, type = "scatter3d", mode = "markers") %>%
-  layout(title = "3D: PIB, CO2 y Esperanza de vida")
+# Filtrar y preparar los datos de 2022
+multidimensional_2022 <- data_long %>%
+  filter(`Series Name` %in% c(
+    "GDP per capita (current US$)",
+    "Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)",
+    "Life expectancy at birth, total (years)",
+    "Population, total"
+  ),
+  Año == 2022,
+  !`Country Name` %in% agregados,
+  !is.na(Valor)) %>%
+  select(`Country Name`, `Series Name`, Valor) %>%
+  pivot_wider(names_from = `Series Name`, values_from = Valor) %>%
+  rename(
+    País = `Country Name`,
+    PIB_per_capita = `GDP per capita (current US$)`,
+    CO2_per_capita = `Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)`,
+    Esperanza_vida = `Life expectancy at birth, total (years)`,
+    Poblacion = `Population, total`
+  ) %>%
+  mutate(
+    Region = countrycode(País, origin = "country.name", destination = "region")
+  ) %>%
+  filter(!is.na(PIB_per_capita), !is.na(CO2_per_capita),
+         !is.na(Esperanza_vida), !is.na(Poblacion), !is.na(Region))
+
+# Crear gráfico interactivo 3D
+plot_ly(
+  data = multidimensional_2022,
+  x = ~PIB_per_capita,
+  y = ~CO2_per_capita,
+  z = ~Esperanza_vida,
+  type = "scatter3d",
+  mode = "markers",
+  color = ~Region,
+  colors = "Set2",
+  size = ~Poblacion,
+  sizes = c(5, 50),
+  text = ~paste("País:", País,
+                "<br>Región:", Region,
+                "<br>PIB per cápita: $", round(PIB_per_capita, 0),
+                "<br>CO₂ per cápita:", round(CO2_per_capita, 2), "t",
+                "<br>Esperanza de vida:", round(Esperanza_vida, 1), "años",
+                "<br>Población:", format(Poblacion, big.mark = ",")),
+  marker = list(opacity = 0.7)
+) %>%
+  layout(
+    title = "Gráfico 3D: PIB per cápita, CO₂ per cápita y Esperanza de vida (2022)",
+    scene = list(
+      xaxis = list(title = "PIB per cápita (US$)"),
+      yaxis = list(title = "CO₂ per cápita (t CO₂e)"),
+      zaxis = list(title = "Esperanza de vida (años)")
+    )
+  )
