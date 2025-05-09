@@ -140,11 +140,15 @@ source("ScatterPlotPIBvsEsperanzaVida4.R", local = knitr::knit_global())
 ```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
+Tendencias:
+
 Se observa una <b>correlación positiva</b>: los países con mayor PIB per cápita tienden a tener una mayor esperanza de vida.<br><br>
 
 Existen excepciones notables, como Estados Unidos, que tiene un PIB alto pero una esperanza de vida más baja en comparación con otros países de ingreso similar.<br><br>
 
 La <b>escala logarítmica</b> permite observar con mayor claridad los países de bajos y medianos ingresos, que de otro modo quedarían agrupados.
+
+La relación sugiere que la riqueza permite inversión en salud, educación y servicios básicos, pero no siempre se traduce directamente en mejor salud (como en EE.UU. por desigualdades internas y sistema de salud ineficiente).
 </span>
 
 
@@ -159,9 +163,12 @@ source("bubblePlotAlfabetizacionAccesoBasico5.R", local = knitr::knit_global())
 ```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
-Es probable que los países con una mayor tasa de alfabetización también presenten un mayor porcentaje de acceso a agua básica.
+La alfabetización impulsa mejores prácticas de higiene y salud. Sin embargo, la densidad poblacional y la gobernanza influyen en el acceso al agua.
 
-Se pueden observar excepciones en países con diferentes niveles de población, donde la falta de alfabetización o de acceso a agua básica puede ser más pronunciada.
+Relación positiva general: Países más alfabetizados tienen mejor acceso a agua.
+
+Excepciones en países de alta población: Algunos países grandes enfrentan retos en cobertura de servicios.
+
 </span>
 
 # 6.Gráfico interactivo en 3D: PIB per cápita, CO₂ per cápita y esperanza de vida
@@ -172,8 +179,14 @@ source("grafico3DMultidimensional6.R", local = knitr::knit_global())
 
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
+Países ricos alta emisión y alta esperanza de vida.
+
+Ejemplos sostenibles Costa Rica con baja emisión y alta salud.
 
 Hallazgo: Países ricos como EE.UU., Canadá y los del Golfo presentan altas emisiones con alto PIB. Algunos países como Costa Rica muestran alta esperanza de vida con menor impacto ambiental, destacando como casos de desarrollo sostenible.
+
+Muestra el dilema entre desarrollo económico y sostenibilidad ambiental, pero también destaca que es posible un desarrollo menos contaminante si se priorizan políticas verdes.
+
 
 </span>
 
@@ -185,8 +198,15 @@ source("faceGridEvoPIBporRegion7.R", local = knitr::knit_global())
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 
+Tendencias:
+Asia Oriental (ej. China): crecimiento acelerado.
+
+África: crecimiento más lento o estancado.
+
 Se utiliza facet_wrap() para mostrar mini líneas de tiempo por región.
-Hallazgo: Asia Oriental ha tenido un crecimiento explosivo (ej. China), mientras que regiones como África han mostrado estancamiento o crecimiento más lento.
+Hallazgo: Asia Oriental ha tenido un crecimiento explosivo , mientras que regiones como África han mostrado estancamiento.
+
+El crecimiento asiático responde a industrialización, comercio exterior y políticas de inversión. África enfrenta desafíos estructurales persistentes.
 
 </span>
 
