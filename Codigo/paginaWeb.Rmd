@@ -102,7 +102,10 @@ source("boxplotVidaRegion2.R", local = knitr::knit_global())
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 <b>Distribución general:</b><br>
-La gráfica muestra las diferencias en la esperanza de vida al nacer entre regiones.<br><br>
+La gráfica de tipo boxplot muestra las diferencias en la esperanza de vida al nacer entre regiones geográfica en el año 2022.<br><br>
+
+La visualización permite explorar la variabilidad y las diferencias en la esperanza de vida en distintas partes, destacando tanto los valores centrales como los valores atípicos en cada región.
+
 
 Se observa que las regiones de Europa y América del Norte tienen un rango de esperanza de vida bastante alto y estrecho, mientras que África Subsahariana muestra una mayor dispersión y valores más bajos.<br><br>
 
@@ -121,14 +124,21 @@ Regiones como África Subsahariana y Asia Meridional tienen una media de esperan
 source("graficoDensidadCO2_3.R", local = knitr::knit_global())
 ```
 
+
+
 <span style="font-family:'Times New Roman'; font-size:16px;">
+<b> Muestra la distribución de las emisiones de CO₂ per cápita (excluyendo LULUCF) a nivel global para el año 2022 que permite una exploración visual interactiva y detectar países con emisiones inusualmente altas.
+.</b>
+
 <b>Distribución:</b> Altamente asimétrica con una larga cola hacia la derecha.<br><br>
+
+
 
 <b>Tendencia general:</b><br>
 La mayoría de países emiten menos de 5 toneladas de CO₂ per cápita.<br>
 Casos extremos como Catar y Emiratos Árabes Unidos superan las 25 toneladas, destacando como <b>outliers</b>.<br><br>
 
-Esto refleja una enorme desigualdad en términos de <b>responsabilidad ambiental</b> y desarrollo económico.
+Esto refleja una <b>enorme desigualdad</b> en términos de <b>responsabilidad ambiental</b> y desarrollo económico.
 </span>
 
 <br><br>
@@ -140,7 +150,11 @@ source("ScatterPlotPIBvsEsperanzaVida4.R", local = knitr::knit_global())
 ```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
-Tendencias:
+
+<b>El objetivo de este ScatterPlot es ver la relación entre el Producto Interno Bruto (PIB) per cápita y la esperanza de vida al nacer en el año 2022. Este permite identificar patrones y excepciones entre países.
+ </b>
+
+<b>Tendencias:</b>
 
 Se observa una <b>correlación positiva</b>: los países con mayor PIB per cápita tienden a tener una mayor esperanza de vida.<br><br>
 
@@ -181,9 +195,9 @@ source("grafico3DMultidimensional6.R", local = knitr::knit_global())
 <span style="font-family:'Times New Roman'; font-size:16px;">
 Países ricos alta emisión y alta esperanza de vida.
 
-Ejemplos sostenibles Costa Rica con baja emisión y alta salud.
+Ejemplos sostenibles <b> Costa Rica </b> con baja emisión y alta salud.
 
-Hallazgo: Países ricos como EE.UU., Canadá y los del Golfo presentan altas emisiones con alto PIB. Algunos países como Costa Rica muestran alta esperanza de vida con menor impacto ambiental, destacando como casos de desarrollo sostenible.
+<b>Hallazgo:</b> Países ricos como EE.UU., Canadá y los del Golfo presentan altas emisiones con alto PIB. Algunos países como Costa Rica muestran alta esperanza de vida con menor impacto ambiental, destacando como casos de desarrollo sostenible.
 
 Muestra el dilema entre desarrollo económico y sostenibilidad ambiental, pero también destaca que es posible un desarrollo menos contaminante si se priorizan políticas verdes.
 
@@ -198,31 +212,52 @@ source("faceGridEvoPIBporRegion7.R", local = knitr::knit_global())
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 
-Tendencias:
+<b>Tendencias:</b>
 Asia Oriental (ej. China): crecimiento acelerado.
 
 África: crecimiento más lento o estancado.
 
 Se utiliza facet_wrap() para mostrar mini líneas de tiempo por región.
-Hallazgo: Asia Oriental ha tenido un crecimiento explosivo , mientras que regiones como África han mostrado estancamiento.
+
+<b>Hallazgos:</b>
+Asia Oriental ha tenido un crecimiento explosivo , mientras que regiones como África han mostrado estancamiento.
 
 El crecimiento asiático responde a industrialización, comercio exterior y políticas de inversión. África enfrenta desafíos estructurales persistentes.
 
 </span>
 
-# 8.Panel combinado: Salud y Educación
+# 8.Panel combinado:  Evolución del PIB per cápita (en dólares) de 2000 hasta 2021 en seis países de Centroamérica.
+
+```{r}
+source("ImagenCompuesta8.R", local = knitr::knit_global())
+```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
-Se construye una imagen con:
 
-Línea de esperanza de vida (2000–2022)
+<b>Costa Rica, Nicaragua, Panamá, Guatemala, Honduras y El Salvador.</b>
 
-Línea de alfabetización en adultos
+Cada una de las cuatro gráficas representa una comparación visual entre estos países desde una perspectiva diferente, pero todas usando el mismo indicador económico clave.
 
-Gráfico de barras del acceso al agua
+<b>Función de la imagen compuesta:</b>
 
+<b>+</b> Analizar la evolución económica de Centroamérica de forma comparativa.
 
-Narrativa: Países con mejoras simultáneas en educación y salud tienden a mostrar progreso estable en desarrollo humano (ej. Chile, Malasia).
+<b>+</b> Identificar qué países han tenido mayor crecimiento en PIB per cápita.
+
+<b>+</b> Explorar tendencias, repuntes y caídas económicas a lo largo del tiempo.
+
+<b>+</b> Ofrecer una visualización interactiva, útil para estudios académicos, políticas públicas o análisis económico.
+
+Observaciones de la imagen:
+
+<b>Desigualdad regional: </b> Panamá y Costa Rica consistentemente tienen un PIB per cápita más alto que el resto de la región, lo que sugiere mayores niveles de ingreso promedio por persona.
+
+<b>Crecimiento desigual: </b> Aunque todos los países muestran crecimiento a lo largo de los años, hay marcadas diferencias en la velocidad y estabilidad del mismo.
+
+<b>Efectos de eventos globales:</b> Por ejemplo, se puede observar un impacto en todos los países durante el año 2020 (pandemia), seguido de una recuperación dispar.
+
+<b>Casos específicos:</b> Nicaragua muestra un crecimiento más lento, mientras que Panamá destaca con una curva más empinada hasta 2019.
+
 
 
 </span>

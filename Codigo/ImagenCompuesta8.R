@@ -54,11 +54,13 @@ g4 <- ggplot(data_2022, aes(x = reorder(`Country Name`, -Valor), y = Valor, fill
 g4_int <- ggplotly(g4)
 
 # Combinar con subplot (2 filas, 2 columnas)
-subplot(
-  g1_int, g2_int,
-  g3_int, g4_int,
-  nrows = 2,
-  margin = 0.05,
-  titleX = TRUE,
-  titleY = TRUE
+print(
+  subplot(
+    g1_int, g2_int,
+    g3_int, g4_int,
+    nrows = 2,
+    margin = 0.05,
+    titleX = TRUE,
+    titleY = TRUE
+  )
 )
