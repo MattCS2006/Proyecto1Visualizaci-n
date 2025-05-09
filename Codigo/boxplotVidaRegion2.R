@@ -31,14 +31,17 @@ vida_2022 <- data_long %>%
   filter(!is.na(Region))  # Por si hay países sin región asignable
 
 # Paso 3: Boxplot interactivo
-plot_ly(vida_2022,
-        x = ~Region,
-        y = ~Valor,
-        type = "box",
-        color = ~Region,
-        colors = "Set2") %>%
-  layout(
-    title = "Esperanza de vida al nacer por región (2022)",
-    xaxis = list(title = "Región"),
-    yaxis = list(title = "Esperanza de vida (años)")
-  )
+print(
+  plot_ly(vida_2022,
+          x = ~Region,
+          y = ~Valor,
+          type = "box",
+          color = ~Region,
+          colors = "Set2") %>%
+    layout(
+      title = "Esperanza de vida al nacer por región (2022)",
+      xaxis = list(title = "Región"),
+      yaxis = list(title = "Esperanza de vida (años)")
+    )
+)
+

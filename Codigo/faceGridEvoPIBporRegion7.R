@@ -53,5 +53,6 @@ p <- ggplot(pib_por_region, aes(x = Año, y = PIB_per_capita, group = País, tex
   )
 
 # Convertir el gráfico en interactivo
+print(
 ggplotly(p, tooltip = "text")
-
+)

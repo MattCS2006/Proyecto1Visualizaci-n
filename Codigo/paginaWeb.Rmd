@@ -33,7 +33,8 @@ source("ImportDataset.R", local = knitr::knit_global())
 ```
 
 <!-- Título principal -->
-#Introducción
+
+# Introducción
 
 <br><span style="font-family:'Times New Roman'; font-size:16px;">
 En un mundo cada vez más globalizado, comprender las diferencias y similitudes entre países en términos de desarrollo económico, social y ambiental es fundamental para la toma de decisiones y formulación de políticas públicas. Este proyecto realiza un análisis exploratorio de datos (EDA) sobre el conjunto de datos <b>World Development Indicators (WDI)</b> del Banco Mundial, con el objetivo de descubrir patrones, relaciones y tendencias clave entre distintas variables de desarrollo.
@@ -77,6 +78,9 @@ Los indicadores seleccionados fueron:<br><br>
 
 # 1. Distribución del PIB per cápita (2022)
 
+```{r}
+source("histogramaPIB1.R", local = knitr::knit_global())
+```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 <b>Distribución:</b> Se observa una distribución asimétrica hacia la derecha.<br><br>
@@ -91,6 +95,10 @@ Esto refleja la <b>desigualdad económica global</b>, donde muchos países sigue
 <br><br>
 
 # 2.Esperanza de Vida por Región (2022)
+
+```{r}
+source("boxplotVidaRegion2.R", local = knitr::knit_global())
+```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 <b>Distribución general:</b><br>
@@ -108,6 +116,10 @@ Regiones como África Subsahariana y Asia Meridional tienen una media de esperan
 <br><br>
 
 # 3. Gráfico de Densidad del CO₂
+
+```{r}
+source("graficoDensidadCO2_3.R", local = knitr::knit_global())
+```
 
 <span style="font-family:'Times New Roman'; font-size:16px;">
 <b>Distribución:</b> Altamente asimétrica con una larga cola hacia la derecha.<br><br>
@@ -141,12 +153,74 @@ La <b>escala logarítmica</b> permite observar con mayor claridad los países de
 
 
 # 5. BubblePlot Alfabetización, Agua y Población (2022)
+
+```{r}
+source("bubblePlotAlfabetizacionAccesoBasico5.R", local = knitr::knit_global())
+```
+
 <span style="font-family:'Times New Roman'; font-size:16px;">
 Es probable que los países con una mayor tasa de alfabetización también presenten un mayor porcentaje de acceso a agua básica.
 
 Se pueden observar excepciones en países con diferentes niveles de población, donde la falta de alfabetización o de acceso a agua básica puede ser más pronunciada.
 </span>
 
+# 6.Gráfico interactivo en 3D: PIB per cápita, CO₂ per cápita y esperanza de vida
+
+```{r}
+source("grafico3DMultidimensional6.R", local = knitr::knit_global())
+```
 
 
-# conclusiones
+<span style="font-family:'Times New Roman'; font-size:16px;">
+
+Hallazgo: Países ricos como EE.UU., Canadá y los del Golfo presentan altas emisiones con alto PIB. Algunos países como Costa Rica muestran alta esperanza de vida con menor impacto ambiental, destacando como casos de desarrollo sostenible.
+
+</span>
+
+# 7.Facet grid: Evolución del PIB per cápita (2000–2022) por región
+
+```{r}
+source("faceGridEvoPIBporRegion7.R", local = knitr::knit_global())
+```
+
+<span style="font-family:'Times New Roman'; font-size:16px;">
+
+Se utiliza facet_wrap() para mostrar mini líneas de tiempo por región.
+Hallazgo: Asia Oriental ha tenido un crecimiento explosivo (ej. China), mientras que regiones como África han mostrado estancamiento o crecimiento más lento.
+
+</span>
+
+# 8.Panel combinado: Salud y Educación
+
+<span style="font-family:'Times New Roman'; font-size:16px;">
+Se construye una imagen con:
+
+Línea de esperanza de vida (2000–2022)
+
+Línea de alfabetización en adultos
+
+Gráfico de barras del acceso al agua
+
+
+Narrativa: Países con mejoras simultáneas en educación y salud tienden a mostrar progreso estable en desarrollo humano (ej. Chile, Malasia).
+
+
+</span>
+
+# Conclusiones
+
+Existe una clara relación entre el ingreso económico de un país y los indicadores de salud y educación que existen en el mismo.
+
+
+A pesar de todo, el crecimiento económico no siempre implica sostenibilidad ambiental en una región o país: hay países que emiten mucho CO₂ por su estilo de vida industrial y que a sus gobiernos no les interesa mitigar los efectos que estos tienen.
+
+
+Se identificaron casos exitosos de desarrollo equilibrado, como Costa Rica o Vietnam, que sus indicadores reflejan que alcanza un alto bienestar sin elevado consumo de recursos.
+
+Temas de interés como estos nos pueden dar perspectiva de cómo funciona el mundo, y como los países gestionan recursos y cómo esto afecta a su misma población en su estilo de vida y en el tipo de ambiente que se desarrollan
+
+De forma del proyecto:
+
+El storytelling y la visualización interactiva permiten transformar datos complejos en historias comprensibles para todo público.
+
+

@@ -21,6 +21,7 @@ alfabetizacion_agua_poblacion_2022 <- data_long %>%
   filter(!is.na(Alfabetizacion), !is.na(Acceso_agua), !is.na(Poblacion))
 
 # Crear el bubble plot interactivo
+print(
 plot_ly(
   data = alfabetizacion_agua_poblacion_2022,
   x = ~Alfabetizacion,
@@ -41,3 +42,4 @@ plot_ly(
     yaxis = list(title = "Acceso a agua básica (% de población)"),
     showlegend = FALSE
   )
+)

@@ -49,30 +49,32 @@ multidimensional_2022 <- data_long %>%
          !is.na(Esperanza_vida), !is.na(Poblacion), !is.na(Region))
 
 # Crear gráfico interactivo 3D
-plot_ly(
-  data = multidimensional_2022,
-  x = ~PIB_per_capita,
-  y = ~CO2_per_capita,
-  z = ~Esperanza_vida,
-  type = "scatter3d",
-  mode = "markers",
-  color = ~Region,
-  colors = "Set2",
-  size = ~Poblacion,
-  sizes = c(5, 50),
-  text = ~paste("País:", País,
-                "<br>Región:", Region,
-                "<br>PIB per cápita: $", round(PIB_per_capita, 0),
-                "<br>CO₂ per cápita:", round(CO2_per_capita, 2), "t",
-                "<br>Esperanza de vida:", round(Esperanza_vida, 1), "años",
-                "<br>Población:", format(Poblacion, big.mark = ",")),
-  marker = list(opacity = 0.7)
-) %>%
-  layout(
-    title = "Gráfico 3D: PIB per cápita, CO₂ per cápita y Esperanza de vida (2022)",
-    scene = list(
-      xaxis = list(title = "PIB per cápita (US$)"),
-      yaxis = list(title = "CO₂ per cápita (t CO₂e)"),
-      zaxis = list(title = "Esperanza de vida (años)")
+print(
+  plot_ly(
+    data = multidimensional_2022,
+    x = ~PIB_per_capita,
+    y = ~CO2_per_capita,
+    z = ~Esperanza_vida,
+    type = "scatter3d",
+    mode = "markers",
+    color = ~Region,
+    colors = "Set2",
+    size = ~Poblacion,
+    sizes = c(5, 50),
+    text = ~paste("País:", País,
+                  "<br>Región:", Region,
+                  "<br>PIB per cápita: $", round(PIB_per_capita, 0),
+                  "<br>CO₂ per cápita:", round(CO2_per_capita, 2), "t",
+                  "<br>Esperanza de vida:", round(Esperanza_vida, 1), "años",
+                  "<br>Población:", format(Poblacion, big.mark = ",")),
+    marker = list(opacity = 0.7)
+  ) %>%
+    layout(
+      title = "Gráfico 3D: PIB per cápita, CO₂ per cápita y Esperanza de vida (2022)",
+      scene = list(
+        xaxis = list(title = "PIB per cápita (US$)"),
+        yaxis = list(title = "CO₂ per cápita (t CO₂e)"),
+        zaxis = list(title = "Esperanza de vida (años)")
+      )
     )
-  )
+)

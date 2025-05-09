@@ -11,14 +11,17 @@ gdp_2022 <- data_long %>%
          !is.na(Valor))
 
 # Crear histograma interactivo
-plot_ly(gdp_2022,
-        x = ~Valor,
-        type = "histogram",
-        nbinsx = 30,
-        marker = list(color = "steelblue")) %>%
-  layout(
-    title = "Distribución del PIB per cápita (2022)",
-    xaxis = list(title = "PIB per cápita (USD)"),
-    yaxis = list(title = "Cantidad de países"),
-    bargap = 0.05
-  )
+print(
+  plot_ly(gdp_2022,
+          x = ~Valor,
+          type = "histogram",
+          nbinsx = 30,
+          marker = list(color = "steelblue")) %>%
+    layout(
+      title = "Distribución del PIB per cápita (2022)",
+      xaxis = list(title = "PIB per cápita (USD)"),
+      yaxis = list(title = "Cantidad de países"),
+      bargap = 0.05
+    )
+)
+
