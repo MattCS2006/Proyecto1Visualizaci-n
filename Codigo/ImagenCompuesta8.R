@@ -3,9 +3,6 @@ library(tidyverse)
 library(patchwork)
 library(plotly)
 
-# Filtrar los datos necesarios
-paises_centroamerica <- c("Costa Rica", "Nicaragua", "Panama", "Guatemala", "Honduras", "El Salvador")
-
 data_centroamerica <- data_long %>%
   filter(`Country Name` %in% paises_centroamerica,
          `Series Name` == "GDP per capita (current US$)",
